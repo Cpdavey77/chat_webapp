@@ -1,3 +1,4 @@
+#hello
 from flask import Flask, flash, redirect, render_template, request, session, get_flashed_messages
 from flask_session import Session
 from flask_socketio import SocketIO, send, join_room, emit
@@ -179,7 +180,7 @@ def chat():
             create_connection(user.username, contact, room_name, CONNECTIONS, ROOMS)
             return render_template("chat.html", username = user.username, contact=contact, room = room_name)
     
-    #done
+    
     #Just a failsafe
     flash("Not Connected", "error")
     return redirect("/chat")
