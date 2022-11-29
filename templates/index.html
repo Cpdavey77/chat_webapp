@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="index_container">
+        <div class="internal_margin">
+            <!--User Section-->
+            <div id="profile_name">
+                <div id="user"><strong>User: {{user.username}}</strong></div>
+                <div id="logout">
+                    <form action="/logout">
+                        <button type="submit">Logout</button>
+                    </form>
+                </div>
+            </div>  
+            <div id="contacts">
+                <h3>Contacts</strong></h3>
+                <div id="contact_list">
+                    {% for contact in contacts %}
+                    <div class="contact_name">
+                        * {{contact.contact_name}}
+                        <form action="/chat" class="contact_form" class="chat_link">
+                            <input type="hidden" name="name" value="{{contact.contact_name}}">
+                            <input type="hidden" name="id" value="{{contact.contactlist_id}}">
+
+                            <!--For starting chat session with contact-->
+                            <button type="submit" formmethod="get" class="button_chat" formtarget=”_blank” >Chat</button>
+                            <!--For removing contact in contactlist-->
+                            <button name="remove" formmethod="post" type="submit" class="button_chat">Remove</button>
+                        </form>
+                    </div>
+        
+                {% endfor %}
+                </div>
+            </div>
+            <div>
+                <div id="add_contact">
+                    <h3>Add Contact</h3>
+                </div>
+                <!--For adding contact in contactlist-->
+                <form action="/" method="post" id="form_post" class="contact_form">
+                    <input type="text" autocomplete="off" placeholder="Enter username" id="username" name="username">
+                    <button name="add" id="add" type="submit">Click to Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %} 

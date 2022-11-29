@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale = 1, width = device-width">
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <title>Chat</title>
+
+    </head>
+    <body>
+        {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                {% if category == "success" %}
+                    <header>
+                        <div class="alert-success" role="alert">
+                            {{ message }}
+                        </div>
+                    </header>
+                {% elif category == "error" %}
+                    <header>
+                        <div class="alert-error" role="alert">
+                            {{ message }}
+                        </div>
+                    </header>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        {% block body %}{% endblock %}
+    </body>
+
+</html>

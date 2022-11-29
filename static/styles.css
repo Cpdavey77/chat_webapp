@@ -1,0 +1,159 @@
+/*CSS Styles*/
+
+
+/*For Login and Registration pages*/
+.container_form {
+    border: 4px solid #3f48cc;
+    border-radius: 0.3rem;
+    max-width: 300px;
+    margin: auto;
+    position: relative;
+    top: 13rem;
+    text-align: center;
+}
+
+.container_form input[type="text"],
+.container_form input[type="password"] {
+    border: 3px solid #3f48cc;
+    line-height: 15px;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    margin-top: 10px;
+}
+
+.container_form input[type="text"]:hover,
+.container_form input[type="password"]:hover {
+    background-color: #f5f5f5;
+    transition-duration: 0.15s;
+}
+
+.container_forminput[type="text"]:focus,
+.container_form input[type="password"]:focus {
+    outline-color: #3f48cc;
+}
+
+.button {
+    border-radius: 0.4rem;
+    padding: 0.3rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 11.5rem;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+
+.button:hover {
+    background-color: #3f48cc;
+    color: white;
+}
+
+
+/*Container style for index page*/
+.index_container {
+    border: 4px solid #3f48cc;
+    border-radius: 0.3rem;
+    max-width: 330px;
+    height: 380px;
+    margin: auto;
+    position: relative;
+    top: 10rem;
+}
+
+.internal_margin {
+    margin: 2rem;
+}
+
+#user {
+    
+    font-size: 30px;
+}
+
+#logout {
+    position: relative;
+    
+    
+}
+
+#logout button {
+    color: white;
+    background-color: red;
+}
+
+.contact_name button {
+
+    background-color: lightblue;
+}
+
+.contact_name {
+    margin-bottom: 1rem;
+}
+
+#contact_list {
+    height: 100px;
+    overflow: auto;
+}
+
+.contact_form {
+    display: inline;
+}
+
+#add {
+    background-color: chartreuse;
+}
+
+button {
+    border-radius: 8px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+/*for chat.html */
+
+#chat_container {
+    border: 4px solid gold;
+    border-radius: 0.3rem;
+    max-width: 400px;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    top: 10rem;
+    
+}   
+
+/*Display area style*/
+.scroller {
+    height: 14rem;
+    border: 2px solid #3f48cc;
+    border-radius: 10px; 
+    margin-bottom: 1rem;    
+    
+    /*For the scrollbar to be automatically at the bottom*/
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* alerts */
+
+.alert-success {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #9fb785;
+    font-size: 140%;
+}
+
+.alert-error {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: salmon;
+    font-size: 140%;
+}   
+
+p {
+    margin-left: 1rem;
+}
