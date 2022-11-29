@@ -179,6 +179,7 @@ def chat():
             create_connection(user.username, contact, room_name, CONNECTIONS, ROOMS)
             return render_template("chat.html", username = user.username, contact=contact, room = room_name)
     
+    #done
     #Just a failsafe
     flash("Not Connected", "error")
     return redirect("/chat")
