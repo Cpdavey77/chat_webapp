@@ -1,4 +1,3 @@
-#hello
 from flask import Flask, flash, redirect, render_template, request, session, get_flashed_messages
 from flask_session import Session
 from flask_socketio import SocketIO, send, join_room, emit
